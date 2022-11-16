@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style: normal;
+  src: url("/app/src/assets/fonts/Montserrat/Montserrat-Medium.ttf")
+    format("truetype");
+}
