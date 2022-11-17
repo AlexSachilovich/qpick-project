@@ -5,23 +5,33 @@ export class Navigation extends Component {
   }
 
   render() {
-    console.log(234234);
     return `
             <wrapper>
                 <nav class="menu">
                     <ul class="menu__list">
                         <li>
-                            <a href="#" class="menu__link">первый уровень</a>
+                            <a href="#" class="menu__link"></a>
                             <ul class="sub-menu__list">
-                                <li>
-                                    <a href="#" class="sub-menu__link">2 level</a>
-                                </li>
+                            ${this.props
+                              .map((item) => {
+                                return `<li>${item}</li>`;
+                              })
+                              .join("")}
                             </ul>
                         </li>
                     </ul>
                 </nav>            
             </wrapper>
     `;
+  }
+
+  static get observedAttributes() {
+    return ["brand"];
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.componentWillUpdate(name, oldValue, newValue);
+    this.props = JSON.parse(this.getAttribute("brand"));
   }
 }
 customElements.define("qpik-nav", Navigation);
