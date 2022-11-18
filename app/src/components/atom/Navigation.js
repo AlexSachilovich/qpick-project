@@ -6,22 +6,23 @@ export class Navigation extends Component {
 
   render() {
     return `
-            <wrapper>
-                <nav class="menu">
-                    <ul class="menu__list">
-                        <li>
-                            <a href="#" class="menu__link"></a>
-                            <ul class="sub-menu__list">
-                            ${this.props
-                              .map((item) => {
-                                return `<li>${item}</li>`;
-                              })
-                              .join("")}
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>            
-            </wrapper>
+                <div class="select">
+                    <div class="select__icon">
+                    </div>
+                    <nav class="nav header__nav">
+                        <ul class="menu"><p class="menu__choose-model">Выбрать модель телефона</p>
+                            <div class="menu__list">
+                                ${this.props
+                                  .map((item) => {
+                                    return `<li class="menu__item">
+                                                <a href="#" class="menu__link">${item}</a>
+                                            </li>`;
+                                  })
+                                  .join("")}
+                            </div>
+                        </ul>
+                    </nav> 
+                </div>
     `;
   }
 

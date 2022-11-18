@@ -1,6 +1,45 @@
-.menu a {
+.menu__link {
   text-decoration: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+
+  color: #1c1c27;
 }
-.menu li {
-  list-style: none;
+
+.menu__list {
+  width: 255px;
+  left: 0px;
+  top: 0px;
+  background: #eaeaea;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 0px 30px 30px;
+}
+
+.menu__item {
+  list-style-type: none;
+  margin: 10px 10px 10px 30px;
+}
+
+.select {
+  display: flex;
+}
+
+.select::before {
+  content: url("../../assets/img/Navigation/mobile.png");
+  margin-right: 15px;
+}
+
+.menu__choose-model::after {
+  content: url("../../assets/img/Navigation/bird.svg");
+  margin-left: 8px;
+}
+
+.menu__item::after {
+  display: inline-block;
+  content: url("../../assets/img/Navigation/bird.svg");
+  transform: rotate(180deg);
+  transform: translateY(-3px);
 }

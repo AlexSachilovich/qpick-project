@@ -1,0 +1,9 @@
+@import url("../app/src/css/body.css");
+@import url("../app/src/css/atom/navigation.css");
+@import url("../app/src/css/theme/fonts.css");
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
